@@ -3,7 +3,7 @@ const path = require("path")
 const fs = require("fs")
 
 let app = express();
-let PORT = 3000;
+let PORT = process.env.PORT ||3000;
 
 fs.writeFile(path.join(__dirname, "db/db.json"), "[]", function (err) {
     if (err) {
